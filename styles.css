@@ -204,12 +204,11 @@ h4 {
 }
 /* ==================== Institution Logos ==================== */
 .institution-logo {
-    width: 100%;
-    max-width: 80px;  /* 120px'den 80px'e düşürdüm */
-    height: auto;
-    max-height: 60px;  /* Maksimum yükseklik ekledim */
+    width: auto;           /* auto yaptık, kendi genişliğine göre ayarlansın */
+    max-width: none;       /* max-width kısıtlamasını kaldırdık */
+    height: 60px;          /* Sadece yüksekliği sabitleyelim */
     margin-top: 10px;
-    padding: 6px;  /* 8px'den 6px'e düşürdüm */
+    padding: 6px;
     background-color: white;
     border-radius: 4px;
     object-fit: contain;
@@ -392,8 +391,8 @@ footer {
     }
     
     .institution-logo {
-        max-width: 60px;  /* Mobilede daha küçük */
-        max-height: 45px;
+        height: 45px;      /* Sadece yükseklik, genişlik otomatik */
+        padding: 4px;
     }
     
     .profile-info h1 {
