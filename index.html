@@ -195,18 +195,19 @@
                     <h3>Implementation and Analysis of Adaptive Switch Image-Based Visual Servoing for Industrial Robots</h3>
                     <p class="venue">Sabancı University, Vision Based Control (EE 529) | Fall 2024</p>
                     <p class="description">
-                        Implemented vision-based robotic control systems, leveraging image-based (IBVS) and position-based (PBVS) 
-                        visual servoing for robotic manipulation. Developed and calibrated a camera system, applying feature 
-                        extraction and homography estimation for precise object tracking. Analyzed system stability and convergence 
-                        using Lyapunov stability theory, ensuring robust and accurate visual servo control in a simulated environment.
+                        Implemented and validated the Adaptive Switch IBVS controller from Ghasemi et al. (2020) 
+                        using MATLAB simulation with UR5 robot model. Developed a three-stage control strategy 
+                        that switches between pure rotation, pure translation, and full IBVS based on rotation 
+                        angle thresholds. Achieved 27-34% faster convergence compared to traditional IBVS, and 
+                        successfully handled extreme orientation mismatches (200°+) where traditional methods failed.
+                        Comparative analysis demonstrated smooth feature trajectories and robust performance across 
+                        multiple test scenarios.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">IBVS/PBVS</span>
-                        <span class="tag">Camera Calibration</span>
-                        <span class="tag">Feature Extraction</span>
+                        <span class="tag">Adaptive Switch IBVS</span>
+                        <span class="tag">Visual Servoing</span>
+                        <span class="tag">MATLAB Simulation</span>
                         <span class="tag">Lyapunov Stability</span>
-                        <span class="tag">OpenCV</span>
                     </div>
                 </div>
             </div>
