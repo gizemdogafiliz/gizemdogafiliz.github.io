@@ -206,8 +206,9 @@ h4 {
 .institution-logo {
     width: auto;           /* auto yaptık, kendi genişliğine göre ayarlansın */
     max-width: none;       /* max-width kısıtlamasını kaldırdık */
-    height: 60px;          /* Sadece yüksekliği sabitleyelim */
-    margin-top: 10px;
+    height: 55px;          /* Sadece yüksekliği sabitleyelim */
+    margin-top: 8px;
+    margin-bottom: -15px;   
     padding: 6px;
     background-color: white;
     border-radius: 4px;
@@ -391,7 +392,7 @@ footer {
     }
     
     .institution-logo {
-        height: 45px;      /* Sadece yükseklik, genişlik otomatik */
+        height: 55px;      /* Sadece yükseklik, genişlik otomatik */
         padding: 4px;
     }
     
