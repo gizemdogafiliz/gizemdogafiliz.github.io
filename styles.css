@@ -1,0 +1,412 @@
+/* ==================== Global Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Değiştirebilirsin! */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --bg-color: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --border-color: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Courier New', monospace;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==================== Header Section ==================== */
+header {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.profile-info h1 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.profile-info .title {
+    font-size: 1.1em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.profile-info .affiliation {
+    font-size: 1em;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* ==================== Section Styles ==================== */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    margin: 20px 0 15px 0;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* ==================== About Section ==================== */
+.about p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.interests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.interests li {
+    padding: 10px 15px;
+    background-color: var(--bg-secondary);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* ==================== News Section ==================== */
+.news-list {
+    list-style: none;
+}
+
+.news-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.98em;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-list .date {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+/* ==================== Project Cards ==================== */
+.project {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 4px 16px var(--shadow);
+    transform: translateY(-3px);
+}
+
+.project-image {
+    flex: 0 0 250px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    margin-top: 0;
+    font-size: 1.25em;
+    color: var(--primary-color);
+}
+
+.project .authors {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin: 8px 0;
+}
+
+.project .venue {
+    font-size: 0.9em;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.project .description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* ==================== Course Projects ==================== */
+.course-project {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.course-project h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.course-project .venue {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.course-project p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==================== Skills Section ==================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border-top: 3px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    box-shadow: 0 4px 12px var(--shadow);
+    transform: translateY(-3px);
+}
+
+.skill-category h4 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.skill-category p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* ==================== Awards Section ==================== */
+.awards-list {
+    list-style: none;
+}
+
+.awards-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 1.6;
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+.awards-list strong {
+    color: var(--primary-color);
+    font-size: 1.05em;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+.footer-note {
+    margin-top: 5px;
+    font-size: 0.85em;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.8em;
+    }
+    
+    .project {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        flex: 1;
+    }
+    
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .interests {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-links {
+        justify-content: center;
+    }
+}
+
+/* ==================== Print Styles ==================== */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .contact-links a {
+        color: var(--text-color);
+    }
+    
+    .project {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
