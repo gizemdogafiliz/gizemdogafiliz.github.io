@@ -79,7 +79,7 @@
             <!-- MIRMI Project -->
             <div class="project">
                 <div class="project-image">
-                    <img src="projects/mirmi-cleaning.gif" alt="Surface Cleaning Robot" onerror="this.src='projects/placeholder.jpg'">
+                    <img src="projects/mirmi-cleaning.gif" alt="Surface Cleaning Robot" onerror="this.src='projects/placeholder.svg'">
                 </div>
                 <div class="project-content">
                     <h3>Vision-Augmented Autonomous Surface Cleaning with Force-Impedance Control</h3>
@@ -106,7 +106,7 @@
             <!-- Naples Project -->
             <div class="project">
                 <div class="project-image">
-                    <img src="projects/hand-exo.jpg" alt="Hand Exoskeleton" onerror="this.src='projects/placeholder.jpg'">
+                    <img src="projects/hand-exo.jpg" alt="Hand Exoskeleton" onerror="this.src='projects/placeholder.svg'">
                 </div>
                 <div class="project-content">
                     <h3>EMG-Based Control of Hand Exoskeleton with Machine Learning</h3>
@@ -132,7 +132,7 @@
             <!-- Graduation Project -->
             <div class="project">
                 <div class="project-image">
-                    <img src="projects/object-placement.png" alt="Object Placement" onerror="this.src='projects/placeholder.jpg'">
+                    <img src="projects/object-placement.png" alt="Object Placement" onerror="this.src='projects/placeholder.svg'">
                 </div>
                 <div class="project-content">
                     <h3>Bayesian Optimization for Sequential Object Placement and Rearrangement</h3>
@@ -157,35 +157,108 @@
         </section>
 
         <!-- Course Projects Section -->
-        <section class="projects-section">
-            <h2>Selected Course Projects</h2>
+        <section class="research">
+            <h2>Course Projects</h2>
             
-            <div class="course-project">
-                <h4>Deep Learning for Robot Control</h4>
-                <p class="venue">Sabancı University | Fall 2024</p>
-                <p>Developed neural network-based controller for Cart-Pole swing-up and stabilization using JAX, Diffrax, and Optax. 
-                   Implemented Mixture-of-Experts controller with state-dependent switching for autonomous robotic motion control.</p>
+            <!-- Project 1: Cart-Pole -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projects/cart-pole.png" alt="Cart-Pole Control" onerror="this.src='projects/placeholder.svg'">
+                </div>
+                <div class="project-content">
+                    <h3>Advanced Cart-Pole Swing-Up Control with JAX and MuJoCo</h3>
+                    <p class="venue">Sabancı University, Deep Learning for Robot Control (ME 58006) | Fall 2024</p>
+                    <p class="description">
+                        Developed a data-driven system identification framework for the Cart-Pole system, utilizing JAX, 
+                        Diffrax, and Optax to estimate system parameters and analyze motion trajectories. Implemented a 
+                        neural network-based controller to perform Cart-Pole swing-up and stabilization, optimizing trajectory 
+                        costs and comparing performance with LQR control. Engineered a Mixture-of-Experts controller, integrating 
+                        state-dependent switching for autonomous robotic motion control, improving stability.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">JAX</span>
+                        <span class="tag">MuJoCo</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">LQR Control</span>
+                        <span class="tag">System Identification</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-project">
-                <h4>Vision-Based Control</h4>
-                <p class="venue">Sabancı University | Fall 2024</p>
-                <p>Implemented IBVS and PBVS visual servoing for robotic manipulation. Analyzed system stability using 
-                   Lyapunov stability theory for robust visual servo control.</p>
+            <!-- Project 2: Visual Servoing -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projects/visual-servoing.png" alt="Visual Servoing" onerror="this.src='projects/placeholder.svg'">
+                </div>
+                <div class="project-content">
+                    <h3>Implementation and Analysis of Adaptive Switch Image-Based Visual Servoing for Industrial Robots</h3>
+                    <p class="venue">Sabancı University, Vision Based Control (EE 529) | Fall 2024</p>
+                    <p class="description">
+                        Implemented vision-based robotic control systems, leveraging image-based (IBVS) and position-based (PBVS) 
+                        visual servoing for robotic manipulation. Developed and calibrated a camera system, applying feature 
+                        extraction and homography estimation for precise object tracking. Analyzed system stability and convergence 
+                        using Lyapunov stability theory, ensuring robust and accurate visual servo control in a simulated environment.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">IBVS/PBVS</span>
+                        <span class="tag">Camera Calibration</span>
+                        <span class="tag">Feature Extraction</span>
+                        <span class="tag">Lyapunov Stability</span>
+                        <span class="tag">OpenCV</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-project">
-                <h4>Introduction to Robotics</h4>
-                <p class="venue">Sabancı University | Spring 2024</p>
-                <p>Engineered 3-DoF manipulator with optimized kinematic analysis. Implemented Matlab/Simulink for 
-                   dynamic control and enhanced trajectory following.</p>
+            <!-- Project 3: 3RRP Mechanism -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projects/3rrp-mechanism.png" alt="3RRP Mechanism" onerror="this.src='projects/placeholder.svg'">
+                </div>
+                <div class="project-content">
+                    <h3>Kinematic and Dynamic Analysis of the 3RRP Mechanism</h3>
+                    <p class="venue">Sabancı University, Kinematics and Dynamics of Machines (EE 521) | Fall 2024</p>
+                    <p class="description">
+                        Developed a MATLAB-based dynamic simulation for a 3RRP Mechanism and a Linear Delta Mechanism, implementing 
+                        forward/inverse kinematics, Jacobian-based motion analysis, and Baumgarte-stabilized integration for 
+                        constraint handling. Formulated and derived equations of motion using Kane's Method and Lagrange's Equations, 
+                        analyzing workspace and singular configurations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Kinematics</span>
+                        <span class="tag">Dynamics</span>
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Kane's Method</span>
+                        <span class="tag">Lagrange's Equations</span>
+                        <span class="tag">Jacobian Analysis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-project">
-                <h4>Autonomous Mobile Robotics</h4>
-                <p class="venue">Sabancı University | Fall 2023</p>
-                <p>Implemented odometry and motion control on EV3 LEGO robots. Applied Kalman Filter and 
-                   Potential Field Path Planning algorithms.</p>
+            <!-- Project 4: Planar Elbow Manipulator -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projects/elbow-manipulator.png" alt="Planar Elbow Manipulator" onerror="this.src='projects/placeholder.svg'">
+                </div>
+                <div class="project-content">
+                    <h3>Design and Control of a Planar Elbow Manipulator</h3>
+                    <p class="venue">Sabancı University, Introduction to Robotics (ME 403) | Spring 2024</p>
+                    <p class="description">
+                        Engineered a 3-DoF planar elbow manipulator with optimized kinematic analysis. Implemented comprehensive 
+                        forward and inverse kinematics solutions. Developed dynamic models using MATLAB/Simulink for simulation 
+                        and control analysis. Designed robust PID and computed torque controllers for enhanced trajectory following 
+                        and improved end-effector positioning accuracy.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Robot Design</span>
+                        <span class="tag">Kinematics</span>
+                        <span class="tag">MATLAB/Simulink</span>
+                        <span class="tag">PID Control</span>
+                        <span class="tag">Trajectory Planning</span>
+                        <span class="tag">Dynamic Modeling</span>
+                    </div>
+                </div>
             </div>
         </section>
 
