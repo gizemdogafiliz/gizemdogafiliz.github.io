@@ -275,6 +275,32 @@ h4 {
     line-height: 1.6;
     margin: 0;
 }
+/* ==================== Project Links (GitHub) ==================== */
+.project-links {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #7e57c2;
+    transform: translateX(3px);
+}
+
+.project-links i {
+    font-size: 1.1em;
+}
 
 /* ==================== Skills Section ==================== */
 .skills-grid {
