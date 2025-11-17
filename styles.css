@@ -391,6 +391,11 @@ footer {
         text-align: center;
     }
     
+    .institution-logo {
+        max-width: 60px;  /* Mobilede daha küçük */
+        max-height: 45px;
+    }
+    
     .profile-info h1 {
         font-size: 1.8em;
     }
