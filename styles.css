@@ -8,15 +8,14 @@
 
 :root {
     /* Color Palette - Değiştirebilirsin! */
-    --primary-color: #5B3A70;
-    --secondary-color: #9B59B6;
-    --accent-color: #E91E63;
+    --primary-color: #004d40;
+    --secondary-color: #00897b;
+    --accent-color: #26c6da;
     --text-color: #333;
     --text-light: #666;
     --bg-color: #ffffff;
-    --bg-secondary: #F5F3F7;
-    --border-color: #E8E4EB;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --bg-secondary: #e0f2f1;
+    --border-color: #b2dfdb;
     
     /* Typography */
     --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
