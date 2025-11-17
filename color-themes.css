@@ -7,6 +7,7 @@
 */
 
 /* ==================== TEMA 1: Mavi Tonlar (Mevcut) ==================== */
+/*
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -17,6 +18,7 @@
     --bg-secondary: #f8f9fa;
     --border-color: #e0e0e0;
 }
+*/
 
 /* ==================== TEMA 2: Mor & Lavanta ==================== */
 /*
@@ -33,7 +35,7 @@
 */
 
 /* ==================== TEMA 3: Yeşil & Doğa ==================== */
-/*
+
 :root {
     --primary-color: #1e5128;
     --secondary-color: #27ae60;
@@ -44,7 +46,7 @@
     --bg-secondary: #F0F7F4;
     --border-color: #D5E8DE;
 }
-*/
+
 
 /* ==================== TEMA 4: Turuncu & Enerji ==================== */
 /*
