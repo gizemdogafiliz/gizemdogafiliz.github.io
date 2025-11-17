@@ -86,14 +86,14 @@ header {
 }
 
 .contact-links a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.3em;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .contact-links a:hover {
-    color: var(--secondary-color);
+    color: #7e57c2;;
     transform: translateY(-2px);
 }
 
@@ -165,7 +165,7 @@ h4 {
 
 .news-list .date {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: white;
     padding: 3px 10px;
     border-radius: 4px;
@@ -210,7 +210,7 @@ h4 {
 .project-content h3 {
     margin-top: 0;
     font-size: 1.25em;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .project .authors {
