@@ -357,6 +357,10 @@ footer {
         font-size: 1.8em;
     }
     
+    .contact-links {
+        justify-content: center;
+    }
+    
     .project {
         flex-direction: column;
     }
