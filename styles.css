@@ -202,18 +202,6 @@ h4 {
     border-radius: 6px;
     border: 1px solid var(--border-color);
 }
-/* ==================== Institution Logos ==================== */
-.institution-logo {
-    width: auto;           /* auto yaptık, kendi genişliğine göre ayarlansın */
-    max-width: none;       /* max-width kısıtlamasını kaldırdık */
-    height: 45px;          /* Sadece yüksekliği sabitleyelim */
-    margin-top: 8px;
-    margin-bottom: -15px;   
-    padding: 5px;
-    background-color: white;
-    border-radius: 4px;
-    object-fit: contain;
-}
 
 .project-content {
     flex: 1;
@@ -389,11 +377,6 @@ footer {
     .profile-section {
         flex-direction: column;
         text-align: center;
-    }
-    
-    .institution-logo {
-        height: 35px;      /* Sadece yükseklik, genişlik otomatik */
-        padding: 4px;
     }
     
     .profile-info h1 {
