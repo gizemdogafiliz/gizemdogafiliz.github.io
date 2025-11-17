@@ -8,14 +8,14 @@
 
 :root {
     /* Color Palette - Değiştirebilirsin! */
-    --primary-color: #1e5128;
-    --secondary-color: #27ae60;
-    --accent-color: #f39c12;
+    --primary-color: #5B3A70;
+    --secondary-color: #9B59B6;
+    --accent-color: #E91E63;
     --text-color: #333;
     --text-light: #666;
     --bg-color: #ffffff;
-    --bg-secondary: #F0F7F4;
-    --border-color: #D5E8DE;
+    --bg-secondary: #F5F3F7;
+    --border-color: #E8E4EB;
     --shadow: rgba(0, 0, 0, 0.1);
     
     /* Typography */
