@@ -292,6 +292,17 @@ h4 {
     font-size: 0.95em;
     transition: all 0.3s ease;
 }
+.project-links-both a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    margin-right: 16px;
+}
 
 .project-links a:hover {
     color: #7e57c2;
