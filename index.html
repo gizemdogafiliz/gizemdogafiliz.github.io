@@ -54,11 +54,11 @@
             <h3>Research Interests</h3>
             <ul class="interests">
                 <li>Robot Control & Manipulation</li>
-                <li>Force-Impedance Control</li>
                 <li>Computer Vision for Robotics</li>
-                <li>Machine Learning & AI</li>
+                <li>Aerial Robotics</li>
+                <li>Robot Learning</li>
                 <li>Human-Robot Interaction</li>
-                <li>Assistive Robotics</li>
+                <li>Machine Learning & AI</li>
             </ul>
         </section>
 
@@ -171,33 +171,37 @@
         <section class="research">
             <h2>Course Projects</h2>
             
-            <!-- Project 1: Cart-Pole -->
+            <!-- Project 1: Aerial Robotics -->
             <div class="project">
                 <div class="project-image">
-                    <img src="projects/mujoco_sim.png" alt="Cart-Pole Control" onerror="this.src='projects/placeholder.svg'">
+                    <img src="projects/aerial-robotics.gif" alt="Aerial Robotics - From Hover to Contact" onerror="this.src='projects/placeholder.svg'">
                 </div>
                 <div class="project-content">
-                    <h3>Advanced Cart-Pole Swing-Up Control with JAX and MuJoCo</h3>
-                    <p class="venue">Sabancı University, Deep Learning for Robot Control (ME 58006) | Fall 2024</p>
+                    <h3>Aerial Robotics: From Hover to Physical Interaction with a Wall</h3>
+                    <p class="venue">Politecnico di Milano, Aerial Robotics Course | Spring 2026</p>
                     <p class="description">
-                        Developed a data-driven system identification framework for the Cart-Pole system, utilizing JAX, 
-                        Diffrax, and Optax to estimate system parameters and analyze motion trajectories. Implemented a 
-                        neural network-based controller to perform Cart-Pole swing-up and stabilization, optimizing trajectory 
-                        costs and comparing performance with LQR control. Engineered a Mixture-of-Experts controller, integrating 
-                        state-dependent switching for autonomous robotic motion control, improving stability.
+                        Built a complete multi-rotor UAV software stack on top of the <em>telekyb3</em> / GenoM3 framework
+                        (LAAS-CNRS / IRISA-Inria / Twente / UCL), driving a fully-actuated tilt-hexarotor in Gazebo.
+                        Covered the full chain from rigid-body modeling and minimum-snap trajectory generation,
+                        through cascaded geometric position + attitude control, to physical interaction with a wall using a
+                        momentum-based wrench observer and an admittance filter. Designed an L-shaped end-effector
+                        (vertical bar + horizontal bar + sphere tip), tuned the contact geometry so the steady-state normal
+                        force satisfies the 2 N inspection requirement, and validated the full inspection-square trajectory
+                        in Gazebo.
                     </p>
-                    <div class="project-links">
-                        <a href="https://github.com/gizemdogafiliz/CartPole-SwingUp-Control" target="_blank">
+                    <div class="project-links-both">
+                        <a href="https://github.com/gizemdogafiliz/Aerial-Robotics-FromHoverToContact" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">JAX</span>
-                        <span class="tag">MuJoCo</span>
-                        <span class="tag">Neural Networks</span>
-                        <span class="tag">LQR Control</span>
-                        <span class="tag">System Identification</span>
+                        <span class="tag">Aerial Robotics</span>
+                        <span class="tag">Tilt-Hexarotor</span>
+                        <span class="tag">telekyb3 / GenoM3</span>
+                        <span class="tag">Gazebo</span>
+                        <span class="tag">Physical Interaction</span>
+                        <span class="tag">Admittance Filter</span>
+                        <span class="tag">Wrench Observer</span>
                     </div>
                 </div>
             </div>
@@ -211,12 +215,12 @@
                     <h3>Implementation and Analysis of Adaptive Switch Image-Based Visual Servoing for Industrial Robots</h3>
                     <p class="venue">Sabancı University, Vision Based Control (EE 529) | Fall 2024</p>
                     <p class="description">
-                        Implemented and validated the Adaptive Switch IBVS controller from Ghasemi et al. (2020) 
-                        using MATLAB simulation with UR5 robot model. Developed a three-stage control strategy 
-                        that switches between pure rotation, pure translation, and full IBVS based on rotation 
-                        angle thresholds. Achieved 27-34% faster convergence compared to traditional IBVS, and 
+                        Implemented and validated the Adaptive Switch IBVS controller from Ghasemi et al. (2020)
+                        using MATLAB simulation with UR5 robot model. Developed a three-stage control strategy
+                        that switches between pure rotation, pure translation, and full IBVS based on rotation
+                        angle thresholds. Achieved 27-34% faster convergence compared to traditional IBVS, and
                         successfully handled extreme orientation mismatches (200°+) where traditional methods failed.
-                        Comparative analysis demonstrated smooth feature trajectories and robust performance across 
+                        Comparative analysis demonstrated smooth feature trajectories and robust performance across
                         multiple test scenarios.
                     </p>
                     <div class="project-links-both">
@@ -236,7 +240,38 @@
                 </div>
             </div>
 
-            <!-- Project 3: 3RRP Mechanism -->
+            <!-- Project 3: Cart-Pole -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projects/mujoco_sim.png" alt="Cart-Pole Control" onerror="this.src='projects/placeholder.svg'">
+                </div>
+                <div class="project-content">
+                    <h3>Advanced Cart-Pole Swing-Up Control with JAX and MuJoCo</h3>
+                    <p class="venue">Sabancı University, Deep Learning for Robot Control (ME 58006) | Fall 2024</p>
+                    <p class="description">
+                        Developed a data-driven system identification framework for the Cart-Pole system, utilizing JAX,
+                        Diffrax, and Optax to estimate system parameters and analyze motion trajectories. Implemented a
+                        neural network-based controller to perform Cart-Pole swing-up and stabilization, optimizing trajectory
+                        costs and comparing performance with LQR control. Engineered a Mixture-of-Experts controller, integrating
+                        state-dependent switching for autonomous robotic motion control, improving stability.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/gizemdogafiliz/CartPole-SwingUp-Control" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">JAX</span>
+                        <span class="tag">MuJoCo</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">LQR Control</span>
+                        <span class="tag">System Identification</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: 3RRP Mechanism -->
             <div class="project">
                 <div class="project-image">
                     <img src="projects/3rrp-mechanism.png" alt="3RRP Mechanism" onerror="this.src='projects/placeholder.svg'">
@@ -261,7 +296,7 @@
                 </div>
             </div>
 
-            <!-- Project 4: Planar Elbow Manipulator -->
+            <!-- Project 5: Planar Elbow Manipulator -->
             <div class="project">
                 <div class="project-image">
                     <img src="projects/elbow-manipulator.jpg" alt="Planar Elbow Manipulator" onerror="this.src='projects/placeholder.svg'">
@@ -290,7 +325,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Project 5: Bioinformatics -->
+            <!-- Project 6: Bioinformatics -->
             <div class="project">
                 <div class="project-image">
                     <img src="projects/phylogenetic_tree_bjornstad.png" alt="Björnstad Syndrome BCS1L Analysis" onerror="this.src='projects/placeholder.svg'">
@@ -387,25 +422,33 @@
                 
                 <!-- Robotics & Tools -->
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Ros_logo.svg" alt="ROS" title="ROS">
+                <img src="https://avatars.githubusercontent.com/u/1743799?s=200&v=4" alt="Gazebo" title="Gazebo">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" title="OpenCV">
                 
                 <!-- Development Tools -->
                 <img src="logos/sw_logo.jpg" alt="SolidWorks" title="SolidWorks">
+                <img src="https://raw.githubusercontent.com/google-deepmind/mujoco/main/banner.png" alt="MuJoCo" title="MuJoCo">
+                <img src="https://avatars.githubusercontent.com/u/14095512?s=200&v=4" alt="Intel RealSense" title="Intel RealSense">
                 <img src="https://raw.githubusercontent.com/google/jax/main/images/jax_logo_250px.png" alt="JAX" title="JAX">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn" title="scikit-learn">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" alt="LaTeX" title="LaTeX">
                 
                 <!-- Version Control & OS -->
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" title="Bash">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>© 2025 Gizem Doğa Filiz. Last updated: November 2025</p>
+            <p>© 2026 Gizem Doğa Filiz. Last updated: May 2026</p>
             <p class="footer-note">Website template inspired by academic portfolio designs</p>
         </footer>
     </div>
