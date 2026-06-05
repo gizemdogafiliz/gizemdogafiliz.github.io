@@ -170,7 +170,44 @@
         <!-- Course Projects Section -->
         <section class="research">
             <h2>Course Projects</h2>
-            
+
+            <!-- Project: Obstacle-Aware Quadrotor NMPC -->
+            <div class="project">
+                <div class="project-image project-image-tall">
+                    <video src="projects/quadrotor-nmpc.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="project-content">
+                    <h3>Obstacle-Aware Quadrotor Control via Nonlinear MPC and Artificial Potential Fields</h3>
+                    <p class="venue">Politecnico di Milano, Aerial Robotics Course | Spring 2026</p>
+                    <p class="description">
+                        Designed a quaternion-based Nonlinear MPC for quadrotor obstacle avoidance and
+                        aggressive maneuvers, solved online with acados SQP-RTI in Gazebo. Studied <em>where</em>
+                        avoidance should live: as a formal keep-out constraint <em>inside</em> the NMPC versus an
+                        Artificial Potential Field planner whose collision-free references the NMPC merely tracks.
+                        Implemented both on the same controller and the same lidar/DBSCAN perception, and compared
+                        them head-to-head on an in-line slalom at a matched obstacle clearance. Identified a shared
+                        attitude-runaway speed limit and showed the APF advantage stems from wider look-ahead, not
+                        the architecture. Also executed a feedforward Lupashin backflip with NMPC recovery,
+                        settling within 0.1 m of the hover point.
+                    </p>
+                    <div class="project-links-both">
+                        <a href="https://github.com/gizemdogafiliz/Obstacle-Aware-Quadrotor-NMPC" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Nonlinear MPC</span>
+                        <span class="tag">Quadrotor</span>
+                        <span class="tag">Obstacle Avoidance</span>
+                        <span class="tag">acados</span>
+                        <span class="tag">Artificial Potential Field</span>
+                        <span class="tag">Lidar / DBSCAN</span>
+                        <span class="tag">Backflip</span>
+                        <span class="tag">Gazebo</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Project 1: Aerial Robotics -->
             <div class="project">
                 <div class="project-image">

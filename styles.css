@@ -203,6 +203,17 @@ h4 {
     border: 1px solid var(--border-color);
 }
 
+/* Taller image box for one card (same width), to fit a portrait video */
+.project-image-tall img,
+.project-image-tall video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
 .project-content {
     flex: 1;
 }
