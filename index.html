@@ -72,15 +72,14 @@
         <section class="news">
             <h2>News</h2>
             <ul class="news-list">
-                <li><span class="date">Jun 2026</span> Attended the ETH Zürich Robotics Summer School (autonomous
-                    exploration on a Unitree A2 quadruped)</li>
+                <li><span class="date">Jun 2026</span> Attended the ETH Zürich Robotics Summer School</li>
                 <li><span class="date">Nov 2025</span> Started MSc in Automation and Control Engineering at Politecnico
                     di Milano</li>
                 <li><span class="date">Jul 2025</span> Completed research internship at MIRMI Lab, TUM, Munich</li>
+                <li><span class="date">Jun 2025</span> Graduated with BSc in Mechatronics Engineering from Sabancı
+                    University, Türkiye</li>
                 <li><span class="date">Sep 2024</span> Completed research internship at PRISMA Lab, University of Naples
                 </li>
-                <li><span class="date">Jun 2025</span> Graduated with BSc in Mechatronics Engineering from Sabancı
-                    University</li>
             </ul>
         </section>
 
@@ -231,20 +230,31 @@
             <!-- Project: Obstacle-Aware Quadrotor NMPC -->
             <div class="project">
                 <div class="project-image project-image-tall">
-                    <video src="projects/quadrotor-nmpc.mp4" autoplay loop muted playsinline></video>
+                    <div class="media-carousel">
+                        <video class="slide active" src="projects/quadrotor-nmpc.mp4"
+                            autoplay muted playsinline data-duration="26000"></video>
+                        <img class="slide" src="projects/backflip-short.gif"
+                            alt="Backflip with NMPC recovery" data-duration="15000">
+                        <div class="dots">
+                            <span class="dot active" data-index="0" aria-label="NMPC keep-out"></span>
+                            <span class="dot" data-index="1" aria-label="Backflip"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3>Obstacle-Aware Quadrotor Control via Nonlinear MPC and Artificial Potential Fields</h3>
                     <p class="venue">Politecnico di Milano, Aerial Robotics Course | Spring 2026</p>
                     <p class="description">
-                        Designed a quaternion-based Nonlinear MPC for quadrotor obstacle avoidance and
-                        aggressive maneuvers, solved online with acados SQP-RTI in Gazebo. Studied <em>where</em>
-                        avoidance should live: as a formal keep-out constraint <em>inside</em> the NMPC versus an
-                        Artificial Potential Field planner whose collision-free references the NMPC merely tracks.
-                        Implemented both on the same controller and the same lidar/DBSCAN perception, and compared
-                        them head-to-head on an in-line slalom at a matched obstacle clearance. Identified a shared
-                        attitude-runaway speed limit and showed the APF advantage stems from wider look-ahead, not
-                        the architecture. Also executed a feedforward Lupashin backflip with NMPC recovery,
+                        Designed a quaternion-based Nonlinear MPC for quadrotor obstacle avoidance, solved online
+                        with acados SQP-RTI at 8.6 ms average solve time in Gazebo. Studied <em>where</em> avoidance
+                        should live: as a formal keep-out constraint <em>inside</em> the NMPC versus an Artificial
+                        Potential Field planner whose collision-free references the NMPC merely tracks. Implemented
+                        both on the same controller and the same lidar/DBSCAN perception, and compared them
+                        head-to-head on an in-line slalom at matched obstacle clearance. Showed the APF speed
+                        advantage stems from wider look-ahead rather than architecture: handing pure-NMPC the same
+                        wide clearance dropped its reliable speed to 0.5 m/s, more than five times below the APF
+                        planner at the same clearance. Identified a shared attitude-runaway ceiling that limits both
+                        architectures at high tilt. Also executed a feedforward Lupashin backflip with NMPC recovery,
                         settling within 0.1 m of the hover point.
                     </p>
                     <div class="project-links-both">
@@ -587,6 +597,50 @@
             <p class="footer-note">Website template inspired by academic portfolio designs</p>
         </footer>
     </div>
+
+    <script>
+        // Media carousel: auto-cycle + clickable dots.
+        // Applies to every .media-carousel on the page independently.
+        document.querySelectorAll('.media-carousel').forEach(function (carousel) {
+            var slides = carousel.querySelectorAll('.slide');
+            var dots = carousel.querySelectorAll('.dot');
+            if (slides.length < 2) return;
+            var fallback = parseInt(carousel.dataset.interval || '12000', 10);
+            var idx = 0;
+            var timer = null;
+
+            function show(i) {
+                idx = (i + slides.length) % slides.length;
+                slides.forEach(function (s, k) {
+                    var isActive = k === idx;
+                    s.classList.toggle('active', isActive);
+                    if (isActive) {
+                        if (s.tagName === 'VIDEO') {
+                            try { s.currentTime = 0; s.play(); } catch (e) { }
+                        } else if (s.tagName === 'IMG') {
+                            var base = s.getAttribute('src').split('?')[0];
+                            s.src = base + '?t=' + Date.now();
+                        }
+                    } else if (s.tagName === 'VIDEO') {
+                        try { s.pause(); } catch (e) { }
+                    }
+                });
+                dots.forEach(function (d, k) { d.classList.toggle('active', k === idx); });
+                schedule();
+            }
+            function schedule() {
+                if (timer) clearTimeout(timer);
+                var dur = parseInt(slides[idx].dataset.duration || fallback, 10);
+                timer = setTimeout(function () { show(idx + 1); }, dur);
+            }
+            dots.forEach(function (d) {
+                d.addEventListener('click', function () {
+                    show(parseInt(d.dataset.index, 10));
+                });
+            });
+            schedule();
+        });
+    </script>
 </body>
 
 </html>
